@@ -108,6 +108,75 @@ pswarna@ubuntu:~/Shell_Scripting$ chmod 777 mergedFile
 pswarna@ubuntu:~/Shell_Scripting$ ls -l mergedFile
 -rwxrwxrwx 2 pswarna pswarna 149 May  3 10:42 mergedFile
 
+pswarna@ubuntu:~/Shell_Scripting$  file *
+mergedFile:      ASCII text
+mergedFileLink:  ASCII text
+mergedFileSLink: symbolic link to mergedFile
+phani:           ASCII text
+test3:           empty
+test4:           empty
+testFile:        ASCII text
+testFile2:       ASCII text
+
+pswarna@ubuntu:~/Shell_Scripting$ wc phani
+  6  29 131 phani
+pswarna@ubuntu:~/Shell_Scripting$ wc -l phani
+6 phani
+pswarna@ubuntu:~/Shell_Scripting$ wc -w phani
+29 phani
+pswarna@ubuntu:~/Shell_Scripting$ wc -c phani
+131 phani
+
+pswarna@ubuntu:~/Shell_Scripting$ cat > animals
+horses
+donkeys
+monkeys
+dogs
+pswarna@ubuntu:~/Shell_Scripting$ sort animals
+dogs
+donkeys
+horses
+monkeys
+
+pswarna@ubuntu:~/Shell_Scripting$ cat > players
+name-sport-age
+playera-cricket-30
+playerb-swimming-27
+playerc-tennis-35
+pswarna@ubuntu:~/Shell_Scripting$ cut -d"-" -f 1,3 players
+name-age
+playera-30
+playerb-27
+playerc-35
+
+pswarna@ubuntu:~/Shell_Scripting$ cat > ddFile
+This is some random sentance
+pswarna@ubuntu:~/Shell_Scripting$ dd if=ddFile of=ddFile1 conv=ucase
+0+1 records in
+0+1 records out
+29 bytes copied, 8.6384e-05 s, 336 kB/s
+pswarna@ubuntu:~/Shell_Scripting$ cat ddFile1
+THIS IS SOME RANDOM SENTANCE
+pswarna@ubuntu:~/Shell_Scripting$ cat ddFile
+This is some random sentance
+
+pswarna@ubuntu:~/Shell_Scripting$ man dd
+pswarna@ubuntu:~/Shell_Scripting$ banner "HEY PHANI"
+#     # ####### #     #         ######  #     #    #    #     #   ###
+#     # #        #   #          #     # #     #   # #   ##    #    #
+#     # #         # #           #     # #     #  #   #  # #   #    #
+####### #####      #            ######  ####### #     # #  #  #    #
+#     # #          #            #       #     # ####### #   # #    #
+#     # #          #            #       #     # #     # #    ##    #
+#     # #######    #            #       #     # #     # #     #   ###
+
+pswarna@ubuntu:~/Shell_Scripting$ ls -l wikiUnix
+-rw-rw-r-- 1 pswarna pswarna 1591 May  3 12:50 wikiUnix
+pswarna@ubuntu:~/Shell_Scripting$ compress -v wikiUnix
+wikiUnix:  -- replaced with wikiUnix.Z Compression: 34.19%
+
+
+
 
 
 
